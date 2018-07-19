@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 0;
+				background: #333;
+				overflow: hidden;
+			}
+			#canvas{
+				overflow: hidden;
+			}
+			ul,li{
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				overflow:hidden;
+				width:100%;
+				height:100%;
+			}
+			li{
+				position: absolute;
+				display: -webkit-box;
+				-webkit-box-pack: center;
+				-webkit-box-align: center;
+				-webkit-backface-visibility: hidden;
+			}
+		</style>
+		<script src="js/ImageSlide.js"></script>
+	</head>
+	<body>
+		<div id="canvas"></div>
+		<script>
+			window.onload=function(){
+				var lists=[
+					{"width":720,"height":1280,url:"images/m1.jpg"},
+					{"width":720,"height":1280,url:"images/m2.jpg"},
+					{"width":720,"height":1280,url:"images/m3.jpg"},
+					{"width":720,"height":1280,url:"images/m4.jpg"},
+					{"width":750,"height":1022,url:"images/s1.jpg"},
+					{"width":500,"height":500,url:"images/s2.jpg"},
+					{"width":724,"height":966,url:"images/s3.jpg"}
+				]
+				new Slider({
+					'dom':document.getElementById("canvas"),
+					'list':lists,
+				
+				})
+				
+			}
+		</script>
+	</body>
+</html>
